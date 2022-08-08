@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.http import JsonResponse
+from django.shortcuts import render
 import json
 
 def index(request):
@@ -34,3 +35,12 @@ def api2(request):
     response_data["site"] = "https://www.torneseumprogramador.com.br"
 
     return JsonResponse(response_data)
+
+
+def html(request):
+    response_data = {}
+    response_data["nome"] = "Danilo"
+    response_data["sobrenome"] = "Aparecido"
+    response_data["site"] = "https://www.torneseumprogramador.com.br"
+
+    return render(request, 'teste.html', { 'dados': response_data })

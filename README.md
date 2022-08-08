@@ -29,21 +29,3 @@ python manage.py migrate
 python manage.py createsuperuser
 
 ```
-
-# mysql connector
-```python
-For Python 3+ version
-
-install mysql-connector as:
-
-pip3 install mysql-connector 
-Sample Python DB connection code:
-
-import mysql.connector
-db_connection = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  passwd=""
-)
-print(db_connection)
-```
