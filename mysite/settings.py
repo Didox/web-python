@@ -86,12 +86,13 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # }
 
 import os
+# os.getenv('USER')
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django_app',
-        'USER': os.getenv('USER'),
+        'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',
         'PORT': '3306',
